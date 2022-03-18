@@ -14,22 +14,22 @@ cursor = connection.cursor()
 # cursor.execute('SELECT "Name" FROM "Artist"')
 
 # query 3 - select only "Queen" from the "Artist" table
-# cursor.execute('SELECT * FROM "Artist" WHERE "Name" = %s', ["Queen"])
+# cursor.execute('SELECT * FROM "Artist" WHERE "Name" = %s', ["Aerosmith"])
 
 # query 4 - select only "Queen" from the "Artist" table
-# cursor.execute('SELECT * FROM "Artist" WHERE "ArtistId" = %s', [51])
+# cursor.execute('SELECT * FROM "Artist" WHERE "ArtistId" = %s', [3])
 
 # query 5 - select only "Queen" from the "Artist" table
-# cursor.execute('SELECT * FROM "Album" WHERE "ArtistId" = %s', [51])
+# cursor.execute('SELECT * FROM "Album" WHERE "ArtistId" = %s', [3])
 
 # query 6 - select only "Queen" from the "Artist" table
-cursor.execute('SELECT * FROM "Track" WHERE "Composer" = %s', ["Bach"])
+cursor.execute('SELECT * FROM "Track" WHERE "Composer" = %s', ["test"])
 
 # fetch the results (multiple)
-results = cursor.fetchall()
+# results = cursor.fetchall()
 
 # fetch the result (single)
-# results = cursor.fetchone()
+results = cursor.fetchone()
 
 # close the connection
 connection.close()
